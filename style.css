@@ -25,3 +25,31 @@ html, input {
 .clearfix {
 	clear: both;
 }
+
+/**
+ * List styling
+ */
+.add-bookmarklet {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	padding: 1em 0;
+}
+
+.add-bookmarklet:hover {
+	background-color: #ccc;
+}
+
+li a {
+	display: inline-block;
+	width: 100%;
+	padding-left: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+li a:hover {
+	background-color: #ccc;
+}

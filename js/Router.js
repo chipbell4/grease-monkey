@@ -5,13 +5,14 @@ var Router = Backbone.Router.extend({
 	},
 	
 	index: function() {
-		console.log("Index");
+		app.detail.empty();
 	},
 
 	show: function(bookmarklet_id) {
-		var bookmarklet = app.Bookmarklets.get(bookmarklet_id);
-
-		console.log("Bookmarklet?");
-		console.log(bookmarklet);
+		// set the bookmarklet as the current detail view
+		app.detail.empty();
+		app.detail.show(new BookmarkletDetailView({
+			model: app.Bookmarklets.get(bookmarklet_id)
+		}));
 	}
 });

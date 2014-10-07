@@ -12,6 +12,9 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 		this.editor = ace.edit(editor_div);
 		this.editor.setTheme('ace/theme/monokai');
 		this.editor.getSession().setMode('ace/mode/javascript');
+
+		// set the code on the editor
+		this.editor.getSession().setValue(this.model.get('code'));
 	},
 
 	save: function() {

@@ -1,5 +1,6 @@
-html {
+html, input {
 	box-sizing: border-box;
+	font-family: 'Helvetica Neue', 'Helvetica', Arial;
 }
 
 *, *:before, *:after {

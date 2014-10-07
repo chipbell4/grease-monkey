@@ -3,7 +3,7 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 	template: '#bookmarklet-detail-template',
 
 	events: {
-		'click .save-button' : 'onClickSave'
+		'keyup' : 'save'
 	},
 
 	onRender: function() {
@@ -14,7 +14,7 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 		this.editor.getSession().setMode('ace/mode/javascript');
 	},
 
-	onClickSave: function() {
+	save: function() {
 		// update model from view
 		this.model.set({
 			title: this.$('[name=title]').val().trim(),

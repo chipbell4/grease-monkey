@@ -17,7 +17,7 @@ app.addInitializer(function() {
 	app.sidebar.show(collection_view);
 
 	// Start routing
-	new Router();
+	app.router = new Router();
 	Backbone.history.start();
 
 	// now fetch the collection

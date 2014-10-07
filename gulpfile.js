@@ -6,7 +6,8 @@ var CLASSES = [
 	'BookmarkletCollection',
 	'BookmarkletItemView',
 	'BookmarkletDetailView',
-	'BookmarkletCollectionView'
+	'BookmarkletCollectionView',
+	'Router'
 ];
 
 var APP_FILES = CLASSES.map(function(classname) {

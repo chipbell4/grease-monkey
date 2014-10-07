@@ -1,6 +1,7 @@
 
 Bookmarklet = Backbone.Model.extend({
 	defaults: {
+		'title': '',
 		'code' : ''
 	},
 	getExecutableLinkHref: function() {

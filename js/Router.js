@@ -1,7 +1,7 @@
 var Router = Backbone.Router.extend({
 	routes: {
-		'' : index,
-	 	':bookmarklet_id' : show
+		'' : 'index',
+	 	':bookmarklet_id' : 'show'
 	},
 	
 	index: function() {

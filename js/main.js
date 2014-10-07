@@ -1,29 +1,28 @@
-var BookmarkletApp = Backbone.Marionette.Application.extend();
+var app = new Backbone.Marionette.Application();
 
-BookmarkletApp.addRegions({
+app.addRegions({
 	sidebar: '#sidebar',
 	detail: '#detail'
 });
 
-BookmarkletApp.addInitializer(function() {
+app.addInitializer(function() {
 	// Setup the main collection
-	BookmarkletApp.Bookmarklets = new BookmarkletCollection();
+	app.Bookmarklets = new BookmarkletCollection();
 
 	// Setup view
 	var collection_view = new BookmarkletCollectionView({
-		collection: BookmarkletApp.Bookmarklets
+		collection: app.Bookmarklets
 	});
 	collection_view.render();
-	BookmarkletApp.sidebar.show(collection_view);
+	app.sidebar.show(collection_view);
 
 	// Start routing
 	new Router();
 	Backbone.history.start();
 
 	// now fetch the collection
-	BookmarkletApp.Bookmarklets.fetch();
+	app.Bookmarklets.fetch();
 });
 
 // create an app
-var app = new BookmarkletApp();
 app.start();

@@ -1,6 +1,9 @@
 BookmarkletItemView = Backbone.Marionette.ItemView.extend({
 	template: '#bookmarklet-item-template',
 	tagName: 'li',
+	modelEvents: {
+		'change' : 'render'
+	},
 	events: {
 		'click .edit' : 'edit'
 	},

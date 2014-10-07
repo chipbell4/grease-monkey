@@ -1,5 +1,5 @@
 
-var Bookmarklet = Backbone.Model.extend({
+Bookmarklet = Backbone.Model.extend({
 	defaults: {
 		'code' : ''
 	},
@@ -16,5 +16,3 @@ var Bookmarklet = Backbone.Model.extend({
 		return 'javascript:' + fullCode;
 	}
 });
-
-modules.exports = Bookmarklet;

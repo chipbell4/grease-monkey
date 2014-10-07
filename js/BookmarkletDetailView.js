@@ -1,7 +1,4 @@
-
-var Bookmarklet = require('./Bookmarklet.js');
-
-var BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
+BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 
 	modelEvents: {
 		'change' : 'render'

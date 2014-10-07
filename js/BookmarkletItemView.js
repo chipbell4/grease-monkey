@@ -1,5 +1,4 @@
-
-var BookmarkletItemView = Backbone.Marionette.ItemView.extend({
+BookmarkletItemView = Backbone.Marionette.ItemView.extend({
 	template: '#bookmarklet-item-template',
 	events: {
 		'click .edit' : 'edit'
@@ -8,5 +7,3 @@ var BookmarkletItemView = Backbone.Marionette.ItemView.extend({
 		console.log('EDITING');
 	}
 });
-
-module.exports = BookmarkletItemView;

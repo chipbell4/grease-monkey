@@ -1,8 +1,26 @@
-#title {
-	padding: 0.3em;
-	font-size: 16px;
+html {
+	box-sizing: border-box;
 }
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+#sidebar {
+	float: left;
+	width: 30%;
+}
+
+#detail {
+	float: left;
+	width: 70%;
+}
+
 #editor {
 	width: 100%;
 	height: 50em;
+}
+
+.clearfix {
+	clear: both;
 }

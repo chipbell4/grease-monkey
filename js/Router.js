@@ -9,7 +9,7 @@ var Router = Backbone.Router.extend({
 	},
 
 	show: function(bookmarklet_id) {
-		var bookmarklet = BookmarkletApp.Bookmarklets.get(bookmarklet_id);
+		var bookmarklet = app.Bookmarklets.get(bookmarklet_id);
 
 		console.log("Bookmarklet?");
 		console.log(bookmarklet);

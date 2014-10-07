@@ -7,9 +7,9 @@ BookmarkletCollectionView = Backbone.Marionette.CompositeView.extend({
 	},
 	addBookmarklet: function() {
 		var model = app.Bookmarklets.create({
-			title: '',
-			code: ''
-		});
+			title: 'Untitled',
+			code: 'console.log(\'Hello World\');'
+		}, { wait: true });
 
 		app.router.navigate(model.get('id'));
 	}

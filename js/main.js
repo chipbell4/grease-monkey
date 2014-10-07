@@ -16,6 +16,14 @@ BookmarkletApp.addInitializer(function() {
 	collection_view.render();
 	BookmarkletApp.sidebar.show(collection_view);
 
+	// Start routing
+	new Router();
+	Backbone.history.start();
+
 	// now fetch the collection
 	BookmarkletApp.Bookmarklets.fetch();
 });
+
+// create an app
+var app = new BookmarkletApp();
+app.start();

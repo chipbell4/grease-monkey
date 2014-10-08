@@ -53,3 +53,12 @@ li a {
 li a:hover {
 	background-color: #ccc;
 }
+
+/**
+ * The details display
+ */
+#detail input {
+	font-size: 1.4em;
+	padding: 0.25em;
+	width: 25em;
+}

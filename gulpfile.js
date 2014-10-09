@@ -17,6 +17,8 @@ var APP_FILES = CLASSES.map(function(classname) {
 });
 var SASS_FILES = './scss/*.scss';
 
+gulp.task('default', ['js', 'sass']);
+
 gulp.task('js', function() {
 	return gulp.src(APP_FILES)
 		.pipe(concat('app.js'))

@@ -2,12 +2,14 @@
 <html lang="en">
 	<head>
 		<title>Grease Monkey</title>
+		<link rel="stylesheet" type="text/css" href="reset.css" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 <body>
 
 <div id="sidebar"></div>
 <div id="detail"></div>
+<div class="clearfix"></div>
 
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
@@ -18,7 +20,7 @@
 
 <!-- Application templates -->
 <script type="text/template" id="bookmarklet-collection-template">
-<div><button class="add-bookmarklet">+</button></div>
+	<div><a class="add-bookmarklet">+</button></a></div>
 <ul></ul>
 </script>
 

@@ -32,6 +32,6 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', ['default'], function() {
-	gulp.watch(APP_FILES, ['default']);
-	gulp.watch(SASS_FILES)
+	gulp.watch(APP_FILES, ['js']);
+	gulp.watch(SASS_FILES, ['sass']);
 });

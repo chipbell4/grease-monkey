@@ -1,6 +1,8 @@
 #sidebar {
 	float: left;
 	width: 30%;
+	background-color: $dim_accent;
+	color: darken($light, 10%);
 }
 
 .add-bookmarklet {
@@ -13,12 +15,12 @@
 }
 
 .add-bookmarklet:hover {
-	background-color: #ccc;
 	transition: all 0.2s;
 }
 
 li a {
 	display: inline-block;
+	text-decoration: none;
 	width: 100%;
 	padding-left: 2em;
 	padding-top: 1em;
@@ -27,6 +29,6 @@ li a {
 }
 
 li a:hover {
-	background-color: #ccc;
+	color: darken($light, 10%);
 }
 

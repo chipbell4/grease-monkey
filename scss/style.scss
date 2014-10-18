@@ -8,7 +8,8 @@ html, input {
 }
 
 body {
-	background-color: $muted_accent;
+	background-color: $light;
+	color: $muted_accent;
 }
 
 *, *:before, *:after {

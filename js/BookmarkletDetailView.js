@@ -29,6 +29,11 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 	},
 
 	deleteBookmarklet: function() {
+		// Make sure to confirm first
+		if(!confirm('Are you sure you want to delete? It\'s a forever commitment!')) {
+			return;
+		}
+
 		this.model.destroy();
 		this.destroy();
 		app.router.navigate('/', { trigger: true });

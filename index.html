@@ -21,6 +21,7 @@
 <!-- Application templates -->
 <script type="text/template" id="bookmarklet-collection-template">
 	<div><a class="add-bookmarklet">+</button></a></div>
+	<hr class="button-separator" />
 <ul></ul>
 </script>
 
@@ -29,6 +30,7 @@
 </script>
 
 <script type="text/template" id="bookmarklet-detail-template">
+	<div class="gutter-extension">X</div>
 	<input name="title" value="<%= title %>" placeholder="Title" type="text" />
 	<div id="editor"></div>
 </script>

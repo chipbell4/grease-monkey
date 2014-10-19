@@ -1,0 +1,40 @@
+#sidebar {
+	float: left;
+	width: 30%;
+	background-color: $heavy_metal;
+	color: $spring_wood;
+}
+
+.add-bookmarklet {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	padding: 1em 0;
+}
+
+.add-bookmarklet:hover {
+	transition: all 0.2s;
+}
+
+#sidebar .button-separator {
+	border-width: 1px 0px;
+	border-color: darken($heavy_metal, 20%) transparent lighten($heavy_metal, 20%);
+}
+
+li a {
+	display: inline-block;
+	text-decoration: none;
+	width: 100%;
+	padding-left: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	transition: all 0.2s;
+	color: $crocodile;
+}
+
+li a:hover {
+	color: $spring_wood;
+}
+

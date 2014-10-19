@@ -3,7 +3,8 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 	template: '#bookmarklet-detail-template',
 
 	events: {
-		'keyup' : 'save'
+		'keyup' : 'save',
+		'click .delete-button' : 'deleteBookmarklet'
 	},
 
 	onRender: function() {
@@ -25,5 +26,11 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 		});
 
 		this.model.save();
+	},
+
+	deleteBookmarklet: function() {
+		this.model.destroy();
+		this.destroy();
+		app.router.navigate('/', { trigger: true });
 	}
 });

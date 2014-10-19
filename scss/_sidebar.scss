@@ -18,6 +18,11 @@
 	transition: all 0.2s;
 }
 
+#sidebar .button-separator {
+	border-width: 1px 0px;
+	border-color: darken($heavy_metal, 20%) transparent lighten($heavy_metal, 20%);
+}
+
 li a {
 	display: inline-block;
 	text-decoration: none;

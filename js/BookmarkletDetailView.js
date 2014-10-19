@@ -18,6 +18,12 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 		this.editor.getSession().setValue(this.model.get('code'));
 	},
 
+	serializeData: function() {
+		return $.extend(this.model.toJSON(), {
+			code_as_link: 'javascript:'
+		});
+	},
+
 	save: function() {
 		// update model from view
 		this.model.set({

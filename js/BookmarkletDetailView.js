@@ -18,6 +18,12 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 		this.editor.getSession().setValue(this.model.get('code'));
 	},
 
+	serializeData: function() {
+		return $.extend(this.model.toJSON(), {
+			code_as_link: 'javascript:' + this.model.getExecutableLinkHref()
+		});
+	},
+
 	save: function() {
 		// update model from view
 		this.model.set({
@@ -26,6 +32,9 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 		});
 
 		this.model.save();
+
+		// Update the bookmarklet link
+		this.$('.bookmarklet-link').attr('href', this.model.getExecutableLinkHref());
 	},
 
 	deleteBookmarklet: function() {

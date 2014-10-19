@@ -32,6 +32,9 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 		});
 
 		this.model.save();
+
+		// Update the bookmarklet link
+		this.$('.bookmarklet-link').attr('href', this.model.getExecutableLinkHref());
 	},
 
 	deleteBookmarklet: function() {

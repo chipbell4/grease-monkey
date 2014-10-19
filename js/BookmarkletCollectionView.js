@@ -6,11 +6,16 @@ BookmarkletCollectionView = Backbone.Marionette.CompositeView.extend({
 		'click .add-bookmarklet' : 'addBookmarklet'
 	},
 	addBookmarklet: function() {
-		var model = app.Bookmarklets.create({
+		var model_attributes = {
 			title: 'Untitled',
 			code: 'console.log(\'Hello World\');'
-		}, { wait: true });
+		};
 
-		app.router.navigate(model.get('id'));
+		var model = app.Bookmarklets.create(model_attributes, {
+			wait: true,
+			success: function(model) {
+				app.router.navigate('/' + model.get('id'), { trigger: true });
+			}
+		});
 	}
 });

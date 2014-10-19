@@ -21,6 +21,17 @@ $gutter_width: 41px;
 	font-size: 1.4em;
 }
 
+#detail .bookmarklet-link {
+	text-decoration: none;
+	color: $crocodile;
+	transition: all 0.2s;
+}
+
+#detail .bookmarklet-link:hover {
+	text-decoration: underline;
+	color: $spring_wood;
+}
+
 #detail input {
 	font-size: 1.4em;
 	padding: 0.25em;

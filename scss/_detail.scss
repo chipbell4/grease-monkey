@@ -11,5 +11,10 @@
 #detail input {
 	font-size: 1.4em;
 	padding: 0.25em;
-	width: 25em;
+	width: 100%;
+	background-color: $heavy_metal;
+	color: $spring_wood;
+	outline: none;
+	border: none;
+	text-align: center;
 }

@@ -16,12 +16,14 @@ app.addInitializer(function() {
 	collection_view.render();
 	app.sidebar.show(collection_view);
 
-	// Start routing
-	app.router = new Router();
-	Backbone.history.start();
-
 	// now fetch the collection
-	app.Bookmarklets.fetch();
+	app.Bookmarklets.fetch({
+		success: function() {
+			// Start routing
+			app.router = new Router();
+			Backbone.history.start();
+		}
+	});
 });
 
 // create an app

@@ -1,8 +1,8 @@
 #sidebar {
 	float: left;
 	width: 30%;
-	background-color: $dim_accent;
-	color: darken($light, 10%);
+	background-color: $heavy_metal;
+	color: $spring_wood;
 }
 
 .add-bookmarklet {
@@ -26,9 +26,10 @@ li a {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	transition: all 0.2s;
+	color: $crocodile;
 }
 
 li a:hover {
-	color: darken($light, 10%);
+	color: $spring_wood;
 }
 

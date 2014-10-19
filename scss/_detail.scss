@@ -1,6 +1,7 @@
 #detail {
 	float: left;
 	width: 70%;
+	box-shadow: inset 5px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
 #editor {
@@ -8,10 +9,21 @@
 	height: 50em;
 }
 
+$gutter_width: 41px;
+
+#detail .gutter-extension {
+	display: inline-block;
+	width: $gutter_width;
+	background-color: $heavy_metal_light;
+	color: $heavy_metal_light;
+	padding: 0.25em;
+	font-size: 1.4em;
+}
+
 #detail input {
 	font-size: 1.4em;
 	padding: 0.25em;
-	width: 100%;
+	width: calc(100% - $gutter_width);
 	background-color: $heavy_metal;
 	color: $spring_wood;
 	outline: none;

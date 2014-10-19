@@ -20,7 +20,7 @@ BookmarkletDetailView = Backbone.Marionette.ItemView.extend({
 
 	serializeData: function() {
 		return $.extend(this.model.toJSON(), {
-			code_as_link: 'javascript:'
+			code_as_link: 'javascript:' + this.model.getExecutableLinkHref()
 		});
 	},
 
